@@ -1,0 +1,25 @@
+{
+  "name": "swagger_brownbag",
+  "version": "1.0.0",
+  "description": "Swagger brownbag - showcase project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fcena/swagger_brownbag.git"
+  },
+  "keywords": [
+    "swagger",
+    "swaggerjs",
+    "brownbag",
+    "openapi"
+  ],
+  "author": "Fabio Antunes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fcena/swagger_brownbag/issues"
+  },
+  "homepage": "https://github.com/Fcena/swagger_brownbag#readme"
+}
