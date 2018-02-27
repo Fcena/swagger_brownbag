@@ -8,7 +8,7 @@ export const app = express();
 
 const config = {
   appRoot: __dirname, // required config
-  swaggerFile: __dirname + '/src/api/swagger/swagger.yaml',
+  // swaggerFile: __dirname + '/src/api/swagger/swagger.yaml',
 };
 
 SwaggerExpress.create(config, (err, swaggerExpress) => {

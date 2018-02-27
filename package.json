@@ -6,7 +6,7 @@
   "keywords": [],
   "author": "",
   "license": "",
-  "main": "app.js",
+  "main": "dist/app.js",
   "dependencies": {
     "express": "^4.12.3",
     "swagger-express-mw": "^0.1.0"
@@ -19,13 +19,13 @@
     "supertest": "^1.0.0"
   },
   "scripts": {
-    "swagger-verify":
-      "env swagger_swagger_fileName=src/api/swagger/swagger.yaml swagger project verify",
-    "swagger-edit":
-      "env swagger_swagger_fileName=src/api/swagger/swagger.yaml swagger project edit",
+    "swagger-verify": "swagger project verify",
+    "swagger-edit": "swagger project edit",
+    "swagger-start": "swagger project start",
+    "swagger-start-mock": "swagger project start -m",
     "dev": "nodemon --exec babel-node app.js",
     "prestart":
-      "babel --copy-files app.js -d dist && babel --copy-files src -d dist/src && babel --copy-files config -d dist/config",
+      "babel --copy-files app.js -d dist && babel --copy-files api -d dist/api && babel --copy-files config -d dist/config",
     "start": "node dist/app.js"
   }
 }
