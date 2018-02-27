@@ -111,7 +111,7 @@ definitions:
   Item:
     type: "object"
     properties:
-      item_id:
+      id:
         type: "integer"
         description: "Item id"
       name:
@@ -119,8 +119,7 @@ definitions:
         description: "Item name"
       created:
         type: "string"
-        format: "date-time"
-        description: "Item created timestamp"
+        description: "Item created date"
       type:
         type: "string"
         description: "Item type"

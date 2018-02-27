@@ -29,7 +29,8 @@
     "swagger-start": "npm run prestart && swagger project start",
     "swagger-start-mock": "npm run prestart && swagger project start -m",
     "dev": "nodemon --exec babel-node app.js",
-    "prestart": "npm run clean && babel --copy-files app.js -d dist && babel --copy-files api -d dist/api && babel --copy-files config -d dist/config",
+    "prestart":
+      "npm run clean && babel --copy-files app.js -d dist && babel --copy-files api -d dist/api && babel --copy-files config -d dist/config",
     "start": "node dist/app.js"
   }
 }
