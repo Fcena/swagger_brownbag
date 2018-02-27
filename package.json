@@ -1,25 +1,31 @@
 {
-  "name": "swagger_brownbag",
-  "version": "1.0.0",
-  "description": "Swagger brownbag - showcase project",
-  "main": "index.js",
+  "name": "shopping-list",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Swagger Brownbag - Shopping List",
+  "keywords": [],
+  "author": "",
+  "license": "",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.12.3",
+    "swagger-express-mw": "^0.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "nodemon": "^1.15.1",
+    "should": "^7.1.0",
+    "supertest": "^1.0.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Fcena/swagger_brownbag.git"
-  },
-  "keywords": [
-    "swagger",
-    "swaggerjs",
-    "brownbag",
-    "openapi"
-  ],
-  "author": "Fabio Antunes",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Fcena/swagger_brownbag/issues"
-  },
-  "homepage": "https://github.com/Fcena/swagger_brownbag#readme"
+    "swagger-verify":
+      "env swagger_swagger_fileName=src/api/swagger/swagger.yaml swagger project verify",
+    "swagger-edit":
+      "env swagger_swagger_fileName=src/api/swagger/swagger.yaml swagger project edit",
+    "dev": "nodemon --exec babel-node app.js",
+    "prestart":
+      "babel --copy-files app.js -d dist && babel --copy-files src -d dist/src && babel --copy-files config -d dist/config",
+    "start": "node dist/app.js"
+  }
 }

@@ -1,1 +1,1 @@
-# swagger_brownbag
+# Skeleton project for Swagger
