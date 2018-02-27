@@ -3,8 +3,12 @@
 import fs from 'fs';
 import express from 'express';
 import SwaggerExpress from 'swagger-express-mw';
+import cors from 'cors';
+import lokijs from 'lokijs';
+export const db = new lokijs('shoppingList.db');
 
 export const app = express();
+app.use(cors());
 
 const config = {
   appRoot: __dirname, // required config

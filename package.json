@@ -8,24 +8,28 @@
   "license": "",
   "main": "dist/app.js",
   "dependencies": {
+    "cors": "^2.8.4",
     "express": "^4.12.3",
+    "lokijs": "^1.5.3",
+    "rimraf": "^2.6.2",
     "swagger-express-mw": "^0.1.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "nodemon": "^1.15.1",
     "should": "^7.1.0",
     "supertest": "^1.0.0"
   },
   "scripts": {
-    "swagger-verify": "swagger project verify",
-    "swagger-edit": "swagger project edit",
-    "swagger-start": "swagger project start",
-    "swagger-start-mock": "swagger project start -m",
+    "clean": "rimraf dist/*",
+    "swagger-verify": "npm run prestart && swagger project verify",
+    "swagger-edit": "npm run prestart && swagger project edit",
+    "swagger-start": "npm run prestart && swagger project start",
+    "swagger-start-mock": "npm run prestart && swagger project start -m",
     "dev": "nodemon --exec babel-node app.js",
-    "prestart":
-      "babel --copy-files app.js -d dist && babel --copy-files api -d dist/api && babel --copy-files config -d dist/config",
+    "prestart": "npm run clean && babel --copy-files app.js -d dist && babel --copy-files api -d dist/api && babel --copy-files config -d dist/config",
     "start": "node dist/app.js"
   }
 }
