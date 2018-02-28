@@ -24,10 +24,10 @@
   },
   "scripts": {
     "clean": "rimraf dist/*",
-    "swagger-verify": "npm run prestart && swagger project verify",
-    "swagger-edit": "npm run prestart && swagger project edit",
-    "swagger-start": "npm run prestart && swagger project start",
-    "swagger-start-mock": "npm run prestart && swagger project start -m",
+    "swagger-verify": "swagger project verify",
+    "swagger-edit": "swagger project edit",
+    "swagger-start": "swagger project start",
+    "swagger-start-mock": "swagger project start -m",
     "dev": "nodemon --exec babel-node app.js",
     "prestart":
       "npm run clean && babel --copy-files app.js -d dist && babel --copy-files api -d dist/api && babel --copy-files config -d dist/config",

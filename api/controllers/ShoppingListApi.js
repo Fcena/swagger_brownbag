@@ -23,7 +23,7 @@ export const getItemById = (req, res) => {
 
 export const addItem = (req, res) => {
   const item = retrieveSwaggerParam(req.swagger, 'item');
-  itemsCollection.insert(item);
+  itemsCollection.insert(JSON.parse(JSON.stringify(item)));
 
   res.json({ id: item.id });
 };
